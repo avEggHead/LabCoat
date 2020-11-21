@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Text;
 
-namespace CSharpEight
+namespace CSharpEight.Activities
 {
     public class Converters : IExecute
     {

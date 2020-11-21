@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 
-namespace CSharpEight
+namespace CSharpEight.Activities
 {
     internal class StringSandBox : IExecute
     {

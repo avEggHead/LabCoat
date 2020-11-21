@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace CSharpEight
+namespace CSharpEight.Activities
 {
     internal class Processes : IExecute
     {

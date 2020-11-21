@@ -14,6 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CSharpEight\CSharpEight.csproj" />
+    <ProjectReference Include="..\CSharpEight\Sandbox.csproj" />
   </ItemGroup>
 </Project>

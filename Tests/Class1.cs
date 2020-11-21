@@ -11,9 +11,6 @@ namespace Tests
         [Fact]
         public void TestOne()
         {
-            Cheetah cheetah = new Cheetah();
-
-            cheetah.SayHello();
         }
     }
 }

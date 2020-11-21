@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using System;
 
-namespace CSharpEight
+namespace CSharpEight.Activities
 {
     internal class DataTableExperiments : IExecute
     {

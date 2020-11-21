@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml;
 
-namespace CSharpEight
+namespace CSharpEight.Activities
 {
     internal class XMLSandbox : IExecute
     {
