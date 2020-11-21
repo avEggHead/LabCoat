@@ -12,9 +12,9 @@ namespace CSharpEight
             {
                 Factory doerFactory = new Factory();
 
-                IExecute doer = doerFactory.ChooseDoer();
+                IExecute activity = doerFactory.ChooseActivity();
 
-                doer.Execute();
+                activity.Execute();
 
                 Console.Write("Keep going? ");
                 var input = Console.ReadKey();

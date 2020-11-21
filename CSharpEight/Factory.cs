@@ -4,19 +4,19 @@ namespace CSharpEight
 {
     internal class Factory
     {
-        public Factory()
+        internal IExecute ChooseActivity()
         {
-        }
-
-        internal IExecute ChooseDoer()
-        {
-            Console.WriteLine("Choose doer: ");
+            Console.WriteLine("Choose Activity: ");
             var choice = Console.ReadKey();
             Console.WriteLine(choice);
-            return this.GetDoerClass(choice);
+
+            return this.GetActivityClass(choice);
         }
 
-        private IExecute GetDoerClass(ConsoleKeyInfo choice)
+        // Put all the classes you want to experiment with here.
+        // when you execute the program type in the number that
+        // matches their case in the switch.
+        private IExecute GetActivityClass(ConsoleKeyInfo choice)
         {
             switch (choice.KeyChar)
             {
@@ -25,6 +25,12 @@ namespace CSharpEight
 
                 case '2':
                     return new StringSandBox();
+
+                case '3':
+                    return new Processes();
+
+                case '4':
+                    return new DataTableExperiments();
             }
             return null;
         }
