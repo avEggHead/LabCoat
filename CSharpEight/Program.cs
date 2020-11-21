@@ -12,9 +12,9 @@ namespace CSharpEight
             while (keepGoing)
             {
                 // Put all of your experiments in the factory class.
-                Factory doerFactory = new Factory();
+                ExperimentFactory factory = new ExperimentFactory();
 
-                IExecute activity = doerFactory.ChooseActivity();
+                IExecute activity = factory.ChooseActivity();
 
                 try
                 {

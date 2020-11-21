@@ -2,7 +2,7 @@
 
 namespace CSharpEight.Activities
 {
-    internal class Factory
+    internal class ExperimentFactory
     {
         internal IExecute ChooseActivity()
         {
