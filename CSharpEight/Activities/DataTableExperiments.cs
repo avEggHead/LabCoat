@@ -35,24 +35,24 @@ namespace CSharpEight.Activities
 
             var row2 = table2.NewRow();
             row2["Column_One"] = "1";
-            row2["Column_Two"] = "THIS IS ALSO BAD";
-            row2["Column_Three"] = "THIS IS BAD";
+            row2["Column_Two"] = "IF YOU SEE THIS AFTER MERGE IT'S BAD";
+            row2["Column_Three"] = "IF YOU SEE ME AFTER MERGE IT'S BAD";
             row2["Column_Four"] = "You should only see me :)";
 
             table1.Rows.Add(row1);
             table2.Rows.Add(row2);
+            table1.TableName = "Table 1";
+            table2.TableName = "Table 2";
             table1.PrimaryKey = new DataColumn[] { table1.Columns["Column_One"] };
             table2.PrimaryKey = new DataColumn[] { table2.Columns["Column_One"] };
-            // merge them
 
-            // cw the results
+            // merge them
             Console.WriteLine("Columns in table 1 = " + table1.Columns.Count);
             Console.WriteLine("Columns in table 2 = " + table2.Columns.Count);
 
             this.PrintRowsOfTable(table1);
             this.PrintRowsOfTable(table2);
 
-            // merge the two
             table2.Merge(table1);
 
             this.PrintRowsOfTable(table1);
@@ -63,6 +63,7 @@ namespace CSharpEight.Activities
         {
             foreach (DataRow row in table.Rows)
             {
+                Console.Write(table.TableName + ": ");
                 foreach (DataColumn column in table.Columns)
                 {
                     Console.Write(row[column.ColumnName] + " | ");
