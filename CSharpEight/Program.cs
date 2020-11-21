@@ -10,19 +10,37 @@ namespace CSharpEight
             bool keepGoing = true;
             while (keepGoing)
             {
+                // Put all of your experiments in the factory class.
                 Factory doerFactory = new Factory();
 
                 IExecute activity = doerFactory.ChooseActivity();
 
-                activity.Execute();
-
-                Console.Write("Keep going? ");
-                var input = Console.ReadKey();
-                if (input.KeyChar != 'y')
+                try
                 {
-                    keepGoing = false;
+                    activity.Execute();
+
+                    Console.WriteLine();
+                    keepGoing = AskToKeepGoing();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Your experiment caused an error: " + ex.Message);
+                    keepGoing = AskToKeepGoing();
                 }
             }
+        }
+
+        private static bool AskToKeepGoing()
+        {
+            bool keepGoing = true;
+            Console.Write("Keep going? ");
+            var input = Console.ReadKey();
+            if (input.KeyChar != 'y')
+            {
+                keepGoing = false;
+            }
+            Console.WriteLine();
+            return keepGoing;
         }
     }
 }
