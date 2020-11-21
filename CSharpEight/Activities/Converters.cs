@@ -4,7 +4,7 @@ using System.Drawing;
 
 namespace CSharpEight.Activities
 {
-    public class Converters : IExecute
+    public class Converters : IRunExperiment
     {
         public void Execute()
         {

@@ -2,7 +2,7 @@
 
 namespace CSharpEight.Activities
 {
-    internal class ThrowsException : IExecute
+    internal class ThrowsException : IRunExperiment
     {
         public void Execute()
         {

@@ -3,7 +3,7 @@ using System;
 
 namespace CSharpEight.Activities
 {
-    internal class DataTableExperiments : IExecute
+    internal class DataTableExperiments : IRunExperiment
     {
         public void Execute()
         {

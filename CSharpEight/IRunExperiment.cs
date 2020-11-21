@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CSharpEight
 {
-    internal interface IExecute
+    internal interface IRunExperiment
     {
         public void Execute();
     }

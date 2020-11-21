@@ -4,7 +4,7 @@ namespace CSharpEight.Activities
 {
     internal class ExperimentFactory
     {
-        internal IExecute ChooseActivity()
+        internal IRunExperiment ChooseActivity()
         {
             Console.WriteLine("Choose Activity: ");
             var choice = Console.ReadKey();
@@ -17,7 +17,7 @@ namespace CSharpEight.Activities
         // matches their case in the switch.
         // Each of the experiment class should implement the IExecute
         // Interface and the Execute() method is the entry point to the class.
-        private IExecute GetActivityClass(ConsoleKeyInfo choice)
+        private IRunExperiment GetActivityClass(ConsoleKeyInfo choice)
         {
             switch (choice.KeyChar)
             {

@@ -1,6 +1,5 @@
 ﻿using CSharpEight.Activities;
 using System;
-using System.Text;
 
 namespace CSharpEight
 {
@@ -14,7 +13,7 @@ namespace CSharpEight
                 // Put all of your experiments in the factory class.
                 ExperimentFactory factory = new ExperimentFactory();
 
-                IExecute activity = factory.ChooseActivity();
+                IRunExperiment activity = factory.ChooseActivity();
 
                 try
                 {

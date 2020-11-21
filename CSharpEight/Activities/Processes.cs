@@ -2,7 +2,7 @@
 
 namespace CSharpEight.Activities
 {
-    internal class Processes : IExecute
+    internal class Processes : IRunExperiment
     {
         public void Execute()
         {

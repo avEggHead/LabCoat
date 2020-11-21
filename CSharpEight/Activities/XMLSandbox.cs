@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace CSharpEight.Activities
 {
-    internal class XMLSandbox : IExecute
+    internal class XMLSandbox : IRunExperiment
     {
         public void Execute()
         {

@@ -3,7 +3,7 @@ using System.Text;
 
 namespace CSharpEight.Activities
 {
-    internal class StringSandBox : IExecute
+    internal class StringSandBox : IRunExperiment
     {
         public void Execute()
         {
