@@ -1,12 +1,17 @@
 ﻿using System;
 
-namespace CSharpEight.Activities
+namespace Sandbox.Activities
 {
-    internal class ThrowsException : IRunExperiment
+    internal class ThrowsException : IExperiment
     {
         public void Execute()
         {
-            throw new ExecutionEngineException("hello");
+            throw new FieldAccessException("hello");
+        }
+
+        public string Identify()
+        {
+            return typeof(ThrowsException).Name;
         }
     }
 }

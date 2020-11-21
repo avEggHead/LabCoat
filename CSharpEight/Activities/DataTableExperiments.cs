@@ -1,15 +1,15 @@
 ﻿using System.Data;
 using System;
 
-namespace CSharpEight.Activities
+namespace Sandbox.Activities
 {
-    internal class DataTableExperiments : IRunExperiment
+    internal class DataTableExperiments : IExperiment
     {
         public void Execute()
         {
             // create two tables
             DataTable table1 = new DataTable();
-            DataTable table2 = new DataTable();
+            //DataTable table2 = new DataTable();
 
             // Add the columns and the rows
 
@@ -24,23 +24,25 @@ namespace CSharpEight.Activities
             DataColumn column4 = new DataColumn("Column_Four");
 
             // add columns to table
-            table1.Columns.AddRange(new DataColumn[] { t1column1, t1column2, t1column3 });
-            table2.Columns.AddRange(new DataColumn[] { t2column1, t2column2, t2column3, column4 });
+            table1.Columns.AddRange(new DataColumn[] { t1column1, t1column2, t1column3, column4 });
+            //table2.Columns.AddRange(new DataColumn[] { t2column1, t2column2, t2column3, column4 });
 
             // create rows
-            var row1 = table1.NewRow();
-            row1["Column_One"] = "1";
-            row1["Column_Two"] = "value_two";
-            row1["Column_Three"] = "value_three";
+            var t1row1 = table1.NewRow();
+            t1row1["Column_One"] = "1";
+            t1row1["Column_Two"] = "value_two";
+            t1row1["Column_Three"] = "value_three";
+            table1.Rows.Add(t1row1);
 
-            var row2 = table2.NewRow();
-            row2["Column_One"] = "1";
-            row2["Column_Two"] = "IF YOU SEE THIS AFTER MERGE IT'S BAD";
-            row2["Column_Three"] = "IF YOU SEE ME AFTER MERGE IT'S BAD";
-            row2["Column_Four"] = "You should only see me :)";
+            DataTable table2 = table1.Copy();
 
-            table1.Rows.Add(row1);
-            table2.Rows.Add(row2);
+            var t2row1 = table2.NewRow();
+            //t2row1["Column_One"] = "1";
+            t2row1["Column_Two"] = "IF YOU SEE THIS AFTER MERGE IT'S BAD";
+            t2row1["Column_Three"] = "IF YOU SEE ME AFTER MERGE IT'S BAD";
+            t2row1["Column_Four"] = "You should only see me :)";
+
+            table2.Rows.Add(t2row1);
             table1.TableName = "Table 1";
             table2.TableName = "Table 2";
             table1.PrimaryKey = new DataColumn[] { table1.Columns["Column_One"] };
@@ -57,6 +59,11 @@ namespace CSharpEight.Activities
 
             this.PrintRowsOfTable(table1);
             this.PrintRowsOfTable(table2);
+        }
+
+        public string Identify()
+        {
+            return typeof(DataTableExperiments).Name;
         }
 
         private void PrintRowsOfTable(DataTable table)

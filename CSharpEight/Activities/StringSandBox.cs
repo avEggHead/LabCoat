@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text;
 
-namespace CSharpEight.Activities
+namespace Sandbox.Activities
 {
-    internal class StringSandBox : IRunExperiment
+    internal class StringSandBox : IExperiment
     {
         public void Execute()
         {
@@ -45,6 +45,11 @@ namespace CSharpEight.Activities
             Console.WriteLine(encoding);
 
             this.PrintMessageOnScreen("greetings");
+        }
+
+        public string Identify()
+        {
+            return typeof(StringSandBox).Name;
         }
 
         private void PrintMessageOnScreen(string message)

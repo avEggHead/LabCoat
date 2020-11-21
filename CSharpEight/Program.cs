@@ -1,36 +1,43 @@
-﻿using CSharpEight.Activities;
+﻿using Sandbox.Activities;
 using System;
 
-namespace CSharpEight
+namespace Sandbox
 {
     internal class Program
     {
         private static void Main(string[] args)
         {
+            // Put all your experiments in the factory class.
+            ExperimentFactory factory = new ExperimentFactory();
             bool keepGoing = true;
+
             while (keepGoing)
             {
-                // Put all of your experiments in the factory class.
-                ExperimentFactory factory = new ExperimentFactory();
-
-                IRunExperiment activity = factory.ChooseActivity();
-
                 try
                 {
-                    activity.Execute();
+                    IExperiment experiment = factory.ChooseExperiment();
+
+                    Console.WriteLine("Running: " + experiment.Identify());
+
+                    experiment.Execute();
 
                     Console.WriteLine();
-                    keepGoing = AskToKeepGoing();
+                    keepGoing = PromptKeepGoing();
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Your experiment caused an error: " + ex.Message);
-                    keepGoing = AskToKeepGoing();
+                    if (!string.IsNullOrWhiteSpace(ex.StackTrace))
+                    {
+                        string line = ex.StackTrace.Substring(ex.StackTrace.IndexOf(".cs:", 0, ex.StackTrace.Length, StringComparison.InvariantCulture) + 4, 10);
+                        Console.WriteLine("Line in your experiment class: " + line);
+                    }
+                    keepGoing = PromptKeepGoing();
                 }
             }
         }
 
-        private static bool AskToKeepGoing()
+        private static bool PromptKeepGoing()
         {
             bool keepGoing = true;
             Console.Write("Keep going? ");

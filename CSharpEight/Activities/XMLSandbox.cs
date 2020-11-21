@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Xml;
 
-namespace CSharpEight.Activities
+namespace Sandbox.Activities
 {
-    internal class XMLSandbox : IRunExperiment
+    internal class XMLSandbox : IExperiment
     {
         public void Execute()
         {
             string s = XmlConvert.ToString(true);
             Console.WriteLine(s);
+        }
+
+        public string Identify()
+        {
+            return typeof(XMLSandbox).Name;
         }
     }
 }

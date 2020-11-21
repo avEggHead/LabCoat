@@ -1,12 +1,17 @@
 ﻿using System.Diagnostics;
 
-namespace CSharpEight.Activities
+namespace Sandbox.Activities
 {
-    internal class Processes : IRunExperiment
+    internal class Processes : IExperiment
     {
         public void Execute()
         {
             Process.Start("notepad.exe");
+        }
+
+        public string Identify()
+        {
+            return typeof(Processes).Name;
         }
     }
 }

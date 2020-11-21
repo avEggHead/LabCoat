@@ -2,9 +2,9 @@
 using System.ComponentModel;
 using System.Drawing;
 
-namespace CSharpEight.Activities
+namespace Sandbox.Activities
 {
-    public class Converters : IRunExperiment
+    public class Converters : IExperiment
     {
         public void Execute()
         {
@@ -16,6 +16,11 @@ namespace CSharpEight.Activities
 
             Color color = (Color)colorConverter.ConvertFromString("Beige");
             Console.WriteLine(color);
+        }
+
+        public string Identify()
+        {
+            return typeof(Converters).Name;
         }
     }
 }
