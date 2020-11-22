@@ -1,42 +1,45 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Sandbox.Activities
 {
+    // Put all your experiment classes in the ExperimentBook dictionary.
+    // when you execute the program type in the number that
+    // matches its key in the dictionary.
+    // Each experiment should implement IExperiment
+    // and the Execute() method is the entry point to the class.
     public class ExperimentFactory
     {
+        public Dictionary<int, IExperiment> ExperimentBook = new Dictionary<int, IExperiment>
+        {
+            { 1, new Converters() },
+            { 2, new StringSandBox() },
+            { 3, new Processes() },
+            { 4, new DataTableExperiments() },
+            { 5, new ThrowsException() },
+            { 6, new PrintingInDifferentColors() },
+        };
+
         public IExperiment ChooseExperiment()
         {
-            Console.WriteLine("Choose Activity: ");
-            var choice = Console.ReadKey();
+            Console.WriteLine("Choose Experiment: ");
+            this.DisplayExperiments();
+            var choice = Console.ReadLine();
             Console.WriteLine();
-            return this.GetActivityClass(choice);
+            return this.GetExperimentClass(choice);
         }
 
-        // Put all the classes you want to experiment with here.
-        // when you execute the program type in the number that
-        // matches their case in the switch.
-        // Each of the experiment class should implement the IExecute
-        // Interface and the Execute() method is the entry point to the class.
-        private IExperiment GetActivityClass(ConsoleKeyInfo choice)
+        private void DisplayExperiments()
         {
-            switch (choice.KeyChar)
+            foreach (var key in this.ExperimentBook.Keys)
             {
-                case '1':
-                    return new Converters();
-
-                case '2':
-                    return new StringSandBox();
-
-                case '3':
-                    return new Processes();
-
-                case '4':
-                    return new DataTableExperiments();
-
-                case '5':
-                    return new ThrowsException();
+                Console.WriteLine(key + ". " + this.ExperimentBook[key].ToString().Replace("Sandbox.Activities.", ""));
             }
-            return null;
+        }
+
+        private IExperiment GetExperimentClass(string choice)
+        {
+            return this.ExperimentBook[Int32.Parse(choice)];
         }
     }
 }

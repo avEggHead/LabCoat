@@ -17,12 +17,20 @@ namespace Sandbox
                 {
                     IExperiment experiment = factory.ChooseExperiment();
 
-                    Console.WriteLine("Running: " + experiment.Identify());
+                    if (experiment != null)
+                    {
+                        Console.WriteLine("Running: " + experiment.Identify());
 
-                    experiment.Execute();
+                        experiment.Execute();
 
-                    Console.WriteLine();
-                    keepGoing = PromptKeepGoing();
+                        Console.WriteLine();
+                        keepGoing = PromptKeepGoing();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Experiment not found.");
+                        keepGoing = PromptKeepGoing();
+                    }
                 }
                 catch (Exception ex)
                 {
