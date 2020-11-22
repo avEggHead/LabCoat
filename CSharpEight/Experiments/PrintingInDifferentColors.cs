@@ -1,4 +1,4 @@
-﻿namespace Sandbox.Activities
+﻿namespace Sandbox.Experiments
 {
     using System;
 

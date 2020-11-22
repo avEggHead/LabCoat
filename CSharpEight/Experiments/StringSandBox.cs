@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Sandbox.Activities
+namespace Sandbox.Experiments
 {
     internal class StringSandBox : IExperiment
     {

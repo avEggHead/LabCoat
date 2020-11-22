@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Drawing;
 
-namespace Sandbox.Activities
+namespace Sandbox.Experiments
 {
     public class Converters : IExperiment
     {

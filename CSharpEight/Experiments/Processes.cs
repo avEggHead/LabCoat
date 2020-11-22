@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace Sandbox.Activities
+namespace Sandbox.Experiments
 {
     internal class Processes : IExperiment
     {

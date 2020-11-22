@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sandbox.Activities
+namespace Sandbox.Experiments
 {
     internal class ThrowsException : IExperiment
     {

@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using System;
 
-namespace Sandbox.Activities
+namespace Sandbox.Experiments
 {
     internal class DataTableExperiments : IExperiment
     {
@@ -37,7 +37,7 @@ namespace Sandbox.Activities
             DataTable table2 = table1.Copy();
 
             var t2row1 = table2.NewRow();
-            //t2row1["Column_One"] = "1";
+            t2row1["Column_One"] = "1";
             t2row1["Column_Two"] = "IF YOU SEE THIS AFTER MERGE IT'S BAD";
             t2row1["Column_Three"] = "IF YOU SEE ME AFTER MERGE IT'S BAD";
             t2row1["Column_Four"] = "You should only see me :)";
