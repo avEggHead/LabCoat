@@ -13,6 +13,7 @@ namespace Sandbox
 
             while (keepGoing)
             {
+                Console.Clear();
                 try
                 {
                     IExperiment experiment = factory.ChooseExperiment();
@@ -48,9 +49,12 @@ namespace Sandbox
         private static bool PromptKeepGoing()
         {
             bool keepGoing = true;
-            Console.Write("Keep going? ");
-            var input = Console.ReadKey();
-            if (input.KeyChar != 'y')
+            Console.Write("Keep going? (yes/no)");
+            Console.WriteLine();
+            Console.Write("> ");
+
+            var input = Console.ReadLine();
+            if (!input.Contains("yes"))
             {
                 keepGoing = false;
             }

@@ -24,6 +24,8 @@ namespace Sandbox.Activities
         {
             Console.WriteLine("Choose Experiment: ");
             this.DisplayExperiments();
+            Console.Write("> ");
+
             var choice = Console.ReadLine();
             Console.WriteLine();
             return this.GetExperimentClass(choice);
@@ -39,7 +41,16 @@ namespace Sandbox.Activities
 
         private IExperiment GetExperimentClass(string choice)
         {
-            return this.ExperimentBook[Int32.Parse(choice)];
+            IExperiment experiment = default(IExperiment);
+            bool exists = this.ExperimentBook.TryGetValue(Int32.Parse(choice), out experiment);
+            if (exists)
+            {
+                return experiment;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
