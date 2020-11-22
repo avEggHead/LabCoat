@@ -9,7 +9,7 @@ namespace Sandbox.Experiments
         {
             // create two tables
             DataTable table1 = new DataTable();
-            //DataTable table2 = new DataTable();
+            DataTable table2 = new DataTable();
 
             // Add the columns and the rows
 
@@ -24,8 +24,8 @@ namespace Sandbox.Experiments
             DataColumn column4 = new DataColumn("Column_Four");
 
             // add columns to table
-            table1.Columns.AddRange(new DataColumn[] { t1column1, t1column2, t1column3, column4 });
-            //table2.Columns.AddRange(new DataColumn[] { t2column1, t2column2, t2column3, column4 });
+            table1.Columns.AddRange(new DataColumn[] { t1column1, t1column2, t1column3 });
+            table2.Columns.AddRange(new DataColumn[] { t2column1, t2column2, t2column3, column4 });
 
             // create rows
             var t1row1 = table1.NewRow();
@@ -34,7 +34,7 @@ namespace Sandbox.Experiments
             t1row1["Column_Three"] = "value_three";
             table1.Rows.Add(t1row1);
 
-            DataTable table2 = table1.Copy();
+            //DataTable table2 = table1.Copy();
 
             var t2row1 = table2.NewRow();
             t2row1["Column_One"] = "1";
