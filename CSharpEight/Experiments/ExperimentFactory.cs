@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Sandbox
+namespace Sandbox.Experiments
 {
     // Put all your experiment classes in the ExperimentBook.
     // when you execute the program type in the number that
@@ -19,6 +19,7 @@ namespace Sandbox
             { 4, new DataTableExperiments() },
             { 5, new ThrowsException() },
             { 6, new PrintingInDifferentColors() },
+            { 7, new NewClass()}
         };
 
         public IExperiment SelectExperiment()
