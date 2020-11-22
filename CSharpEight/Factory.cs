@@ -14,7 +14,7 @@ namespace Sandbox
         public Dictionary<int, IExperiment> ExperimentBook = new Dictionary<int, IExperiment>
         {
             { 1, new Converters() },
-            { 2, new StringSandBox() },
+            { 2, new Strings() },
             { 3, new Processes() },
             { 4, new DataTableExperiments() },
             { 5, new ThrowsException() },

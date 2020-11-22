@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Sandbox.Experiments
 {
-    internal class StringSandBox : IExperiment
+    internal class Strings : IExperiment
     {
         public void Execute()
         {
@@ -49,7 +49,7 @@ namespace Sandbox.Experiments
 
         public string Identify()
         {
-            return typeof(StringSandBox).Name;
+            return typeof(Strings).Name;
         }
 
         private void PrintMessageOnScreen(string message)

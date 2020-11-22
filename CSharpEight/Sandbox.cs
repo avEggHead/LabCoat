@@ -46,22 +46,45 @@ namespace Sandbox
 
         private void HandleErrorInExperiment(Exception ex)
         {
-            Console.WriteLine("Your experiment caused an error: " + ex.Message);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("Error in experiment. ");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("Message: " + ex.Message);
+            Console.ResetColor();
             if (!string.IsNullOrWhiteSpace(ex.StackTrace))
             {
                 string line = ex.StackTrace.Substring(ex.StackTrace.IndexOf(".cs:", 0, ex.StackTrace.Length, StringComparison.InvariantCulture) + 4, 10);
-                Console.WriteLine("Line in your experiment class: " + line);
+                Console.Write("Line in your experiment class: ");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(line);
+                Console.ResetColor();
             }
             this.run = PromptKeepGoing();
         }
 
         private void RunExperiment(IExperiment experiment)
         {
-            Console.WriteLine("Running: " + experiment.Identify());
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("Running: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(experiment.Identify());
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Start of Experiment Output: ");
+            Console.WriteLine("=================================");
+            Console.WriteLine();
+            Console.ResetColor();
 
             experiment.Execute();
 
+            Console.ResetColor();
             Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("=================================");
+            Console.WriteLine("End of Experiment Output: ");
+            Console.WriteLine();
+            Console.ResetColor();
+
             this.run = PromptKeepGoing();
         }
 
