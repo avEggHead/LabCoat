@@ -19,7 +19,7 @@ namespace Sandbox.Experiments
             { 4, new DataTableExperiments() },
             { 5, new ThrowsException() },
             { 6, new PrintingInDifferentColors() },
-            { 7, new NewClass()}
+            { 7, new NewClass()},
         };
 
         public IExperiment SelectExperiment()
