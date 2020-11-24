@@ -1,16 +1,14 @@
-# Sandbox
+# LabCoat
 
 ## Project Description:
- This console application gives you the ability to practice with unfamiliar data structures and design patterns, 
- and gives you a way to keep track of what you've learned for future references.
+ Experiment with unfamiliar data structures and design patterns and keywords.  
+ Keep track of your past experiments in an organized way.
  
  ## Instructions:
- 1. Add any new experiment classes to the ExperimentBook dictionary located in the ExperimentFactory class with an integer key.
+ 1. Add an experiment to the ExperimentBook, which is located in the Laboratory class.
  2. Implement the IExperiment interface in your new experiment class.
- 3. The Execute() method is the entry point to your experiment.
- 4. The Identify() method should return a string which identifies your experiment.
- 5. Run the app.
- 6. Your experiment will be displayed in the list.
- 7. Type in the number corresponding to your experiment.
- 8. Your experiment code will execute.
- 9. You can type yes and hit enter to reload the experiment menu once your experiment completes.
+ 3. Hit CTRL + F5 to run the app.
+ 4. Your new experiment will be in the list.
+ 5. Type in its number and hit ENTER.
+ 6. That runs your experiment and displays the results.
+ 7. If you want to run another type 'yes' at the 'Keep Going?' prompt.
