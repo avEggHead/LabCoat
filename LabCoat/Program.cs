@@ -9,9 +9,8 @@ namespace Sandbox
         {
             // All you have to do is put new experiment classes in the ExperimentFactory.
             Laboratory lab = new Laboratory();
-
             Scientist scientist = new Scientist(lab);
-            scientist.StartExperimenting();
+            scientist.GoIntoLab();
         }
     }
 }

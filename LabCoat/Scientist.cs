@@ -16,7 +16,7 @@ namespace Sandbox
             this.lab = lab;
         }
 
-        public void StartExperimenting()
+        public void GoIntoLab()
         {
             while (this.IsExperimenting)
             {
