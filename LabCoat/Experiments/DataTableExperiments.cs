@@ -5,7 +5,7 @@ namespace Sandbox.Experiments
 {
     internal class DataTableExperiments : IExperiment
     {
-        public void Execute()
+        public void Experiment()
         {
             // create two tables
             DataTable table1 = new DataTable();
@@ -61,7 +61,7 @@ namespace Sandbox.Experiments
             this.PrintRowsOfTable(table2);
         }
 
-        public string Identify()
+        public string IdentifyExperiment()
         {
             return typeof(DataTableExperiments).Name;
         }

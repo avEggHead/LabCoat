@@ -5,7 +5,7 @@ namespace Sandbox.Experiments
 {
     internal class Strings : IExperiment
     {
-        public void Execute()
+        public void Experiment()
         {
             var symbol = 'a';
 
@@ -47,7 +47,7 @@ namespace Sandbox.Experiments
             this.PrintMessageOnScreen("greetings");
         }
 
-        public string Identify()
+        public string IdentifyExperiment()
         {
             return typeof(Strings).Name;
         }

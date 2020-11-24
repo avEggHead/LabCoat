@@ -4,7 +4,7 @@
 
     internal class PrintingInDifferentColors : IExperiment
     {
-        public void Execute()
+        public void Experiment()
         {
             Console.ForegroundColor = ConsoleColor.Black;
             Console.BackgroundColor = ConsoleColor.Red;
@@ -12,7 +12,7 @@
             Console.ResetColor();
         }
 
-        public string Identify()
+        public string IdentifyExperiment()
         {
             return typeof(PrintingInDifferentColors).Name;
         }

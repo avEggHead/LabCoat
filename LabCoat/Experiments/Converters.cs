@@ -6,7 +6,7 @@ namespace Sandbox.Experiments
 {
     public class Converters : IExperiment
     {
-        public void Execute()
+        public void Experiment()
         {
             double number = 3.9;
             int i = Convert.ToInt32(number);
@@ -18,7 +18,7 @@ namespace Sandbox.Experiments
             Console.WriteLine(color);
         }
 
-        public string Identify()
+        public string IdentifyExperiment()
         {
             return typeof(Converters).Name;
         }

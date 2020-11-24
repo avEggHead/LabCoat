@@ -9,7 +9,7 @@ namespace Sandbox.Experiments
     // matches its key in the dictionary.
     // Each experiment should implement IExperiment
     // and the Execute() method is the entry point to the class.
-    public class ExperimentFactory
+    public class Laboratory
     {
         public Dictionary<int, IExperiment> ExperimentBook = new Dictionary<int, IExperiment>
         {

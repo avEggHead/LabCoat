@@ -2,12 +2,12 @@
 {
     public interface IExperiment
     {
-        public void Execute();
+        public void Experiment();
 
         /// <summary>
         /// In your implementation use the syntax in the returns tag.
         /// </summary>
         /// <returns>   return typeof(put the name of the class here).Name;    </returns>
-        public string Identify();
+        public string IdentifyExperiment();
     }
 }

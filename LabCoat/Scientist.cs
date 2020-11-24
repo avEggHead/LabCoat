@@ -1,26 +1,28 @@
 ﻿using Sandbox.Experiments;
 using System;
+using System.Diagnostics;
+using System.Threading;
 
 namespace Sandbox
 {
-    internal class Sandbox
+    internal class Scientist
     {
-        private bool run = true;
+        private bool IsExperimenting = true;
 
-        private ExperimentFactory factory;
+        private Laboratory lab;
 
-        public Sandbox(ExperimentFactory factory)
+        public Scientist(Laboratory lab)
         {
-            this.factory = factory;
+            this.lab = lab;
         }
 
-        public void Run()
+        public void StartExperimenting()
         {
-            while (this.run)
+            while (this.IsExperimenting)
             {
                 try
                 {
-                    IExperiment experiment = factory.SelectExperiment();
+                    IExperiment experiment = lab.SelectExperiment();
 
                     if (experiment != null)
                     {
@@ -41,7 +43,7 @@ namespace Sandbox
         private void HandleExperimentNotFound()
         {
             Console.WriteLine("Experiment not found.");
-            this.run = PromptKeepGoing();
+            this.IsExperimenting = PromptKeepGoing();
         }
 
         private void HandleErrorInExperiment(Exception ex)
@@ -60,7 +62,7 @@ namespace Sandbox
                 Console.WriteLine(line);
                 Console.ResetColor();
             }
-            this.run = PromptKeepGoing();
+            this.IsExperimenting = PromptKeepGoing();
         }
 
         private void RunExperiment(IExperiment experiment)
@@ -68,24 +70,31 @@ namespace Sandbox
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("Running: ");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(experiment.Identify());
+            Console.WriteLine(experiment.IdentifyExperiment());
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Start of Experiment Output: ");
             Console.WriteLine("=================================");
             Console.WriteLine();
             Console.ResetColor();
 
-            experiment.Execute();
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
 
+            experiment.Experiment();
+            timer.Stop();
             Console.ResetColor();
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("=================================");
             Console.WriteLine("End of Experiment Output: ");
-            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Elapsed Time: " + timer.ElapsedMilliseconds + " ms");
             Console.ResetColor();
+            Console.WriteLine();
 
-            this.run = PromptKeepGoing();
+            this.IsExperimenting = PromptKeepGoing();
+
+            GC.Collect();
         }
 
         private bool PromptKeepGoing()

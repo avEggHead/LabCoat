@@ -2,12 +2,12 @@
 {
     internal class NewClass : IExperiment
     {
-        public void Execute()
+        public void Experiment()
         {
             throw new System.NotImplementedException();
         }
 
-        public string Identify()
+        public string IdentifyExperiment()
         {
             throw new System.NotImplementedException();
         }
