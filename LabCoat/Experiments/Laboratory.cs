@@ -20,6 +20,7 @@ namespace Sandbox.Experiments
             { 5, new ThrowsException() },
             { 6, new PrintingInDifferentColors() },
             { 7, new NewClass()},
+            { 8, new THingIAmDoing() }
         };
 
         public IExperiment SelectExperiment()
