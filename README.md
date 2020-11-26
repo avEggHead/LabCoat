@@ -1,7 +1,7 @@
 # LabCoat
 
 ## Project Description:
- Experiment with unfamiliar data structures and design patterns and keywords.  
+ Experiment with unfamiliar data structures, design patterns, and keywords.  
  Keep track of your past experiments in an organized way.
  
  ## Instructions:
