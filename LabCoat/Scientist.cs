@@ -37,17 +37,28 @@ namespace Sandbox
                 {
                     this.HandleErrorInExperiment(ex);
                 }
+                finally
+                {
+                    GC.WaitForPendingFinalizers();
+                    GC.Collect();
+                }
             }
         }
 
         private void HandleExperimentNotFound()
         {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("Experiment not found.");
+            Console.ResetColor();
             this.IsExperimenting = PromptKeepGoing();
         }
 
         private void HandleErrorInExperiment(Exception ex)
         {
+            if (Console.CursorLeft > 0)
+            {
+                Console.WriteLine();
+            }
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("Error in experiment. ");
             Console.ResetColor();
@@ -76,13 +87,16 @@ namespace Sandbox
             Console.WriteLine("=================================");
             Console.WriteLine();
             Console.ResetColor();
+            var cursorSize = Console.CursorSize;
 
             Stopwatch timer = new Stopwatch();
             timer.Start();
 
             experiment.Experiment();
             timer.Stop();
+
             Console.ResetColor();
+            Console.CursorSize = cursorSize;
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("=================================");
@@ -93,8 +107,6 @@ namespace Sandbox
             Console.WriteLine();
 
             this.IsExperimenting = PromptKeepGoing();
-
-            GC.Collect();
         }
 
         private bool PromptKeepGoing()

@@ -19,8 +19,13 @@ namespace Sandbox.Experiments
             { 4, new DataTableExperiments() },
             { 5, new ThrowsException() },
             { 6, new PrintingInDifferentColors() },
-            { 7, new NewClass()},
-            { 8, new THingIAmDoing() }
+            { 7, new NewClass() },
+            { 8, new ConsoleTesting() },
+            { 9, new HowLongDoesItTakeToCountAndPrint() },
+            { 10, new RunningAWhileLoop() },
+            { 11, new HowDoDelegatesWork() },
+            {12, new CryptographyHowItWorks() },
+            { 13, new ByteArrayExperiments()}
         };
 
         public IExperiment SelectExperiment()

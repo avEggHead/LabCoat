@@ -55,6 +55,7 @@ namespace Sandbox.Experiments
             this.PrintRowsOfTable(table1);
             this.PrintRowsOfTable(table2);
 
+            Console.WriteLine("Merging...");
             table2.Merge(table1);
 
             this.PrintRowsOfTable(table1);
