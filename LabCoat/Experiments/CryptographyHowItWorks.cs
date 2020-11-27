@@ -12,7 +12,7 @@
 
             string messageInTheClear = "This is an important message";
             byte[] messageAsByteArray = Encoding.ASCII.GetBytes(messageInTheClear);
-            System.Console.WriteLine("Message in the clear" + messageInTheClear);
+            System.Console.WriteLine("Message in the clear: " + messageInTheClear);
             this.PrintByteArrayContents(messageAsByteArray, "Message as byte array");
             byte[] safeMessage = ProtectedData.Protect(messageAsByteArray, null, scope);
             this.PrintByteArrayContents(safeMessage, "Safe Message");

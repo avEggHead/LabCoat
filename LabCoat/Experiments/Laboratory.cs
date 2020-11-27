@@ -24,17 +24,18 @@ namespace Sandbox.Experiments
             { 9, new HowLongDoesItTakeToCountAndPrint() },
             { 10, new RunningAWhileLoop() },
             { 11, new HowDoDelegatesWork() },
-            {12, new CryptographyHowItWorks() },
-            { 13, new ByteArrayExperiments()}
+            { 12, new CryptographyHowItWorks() },
+            { 13, new ByteArrayExperiments()},
+            { 14, new HashingTest() }
         };
 
         public IExperiment SelectExperiment()
         {
-            this.DisplayExperimentMenu();
+            this.DisplayExperimentBookContents();
             return this.GetExperimentClass();
         }
 
-        private void DisplayExperimentMenu()
+        private void DisplayExperimentBookContents()
         {
             Console.WriteLine("Choose Experiment: (type the number and hit Enter)");
             foreach (var key in this.ExperimentBook.Keys)

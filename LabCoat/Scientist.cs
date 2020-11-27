@@ -43,6 +43,10 @@ namespace Sandbox
                     GC.Collect();
                 }
             }
+            // leave lab
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("LabCoat was made by Clinton Avery and is under a Creative Commons License");
+            Console.ResetColor();
         }
 
         private void HandleExperimentNotFound()
@@ -83,7 +87,7 @@ namespace Sandbox
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(experiment.IdentifyExperiment());
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Start of Experiment Output: ");
+            Console.WriteLine("***Start of Experiment Output***");
             Console.WriteLine("=================================");
             Console.WriteLine();
             Console.ResetColor();
@@ -100,7 +104,7 @@ namespace Sandbox
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("=================================");
-            Console.WriteLine("End of Experiment Output: ");
+            Console.WriteLine("***End of Experiment Output*** ");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Elapsed Time: " + timer.ElapsedMilliseconds + " ms");
             Console.ResetColor();
