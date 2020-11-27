@@ -1,9 +1,8 @@
-﻿using LabCoat.Experiments;
-using System;
-using System.Collections.Generic;
-
-namespace LabCoat.Experiments
+﻿namespace LabCoat.Experiments
 {
+    using System;
+    using System.Collections.Generic;
+
     // Put all your experiment classes in the ExperimentBook.
     // when you execute the program type in the number that
     // matches its key in the dictionary.
@@ -13,21 +12,35 @@ namespace LabCoat.Experiments
     {
         public Dictionary<int, IExperiment> ExperimentBook = new Dictionary<int, IExperiment>
         {
-            { 1, new ExampleExperiment() },
+            { 1, new Converters() },
+            { 2, new Strings() },
+            { 3, new Processes() },
+            { 4, new DataTableExperiments() },
+            { 5, new ThrowsException() },
+            { 6, new PrintingInDifferentColors() },
+            { 7, new NewClass() },
+            { 8, new ConsoleTesting() },
+            { 9, new HowLongDoesItTakeToCountAndPrint() },
+            { 10, new RunningAWhileLoop() },
+            { 11, new HowDoDelegatesWork() },
+            { 12, new CryptographyHowItWorks() },
+            { 13, new ByteArrayExperiments()},
+            { 14, new HashingTest() },
+            { 15, new SystemInfoTesting() },
         };
 
         public IExperiment SelectExperiment()
         {
-            this.DisplayExperimentMenu();
+            this.DisplayExperimentBookContents();
             return this.GetExperimentClass();
         }
 
-        private void DisplayExperimentMenu()
+        private void DisplayExperimentBookContents()
         {
             Console.WriteLine("Choose Experiment: (type the number and hit Enter)");
             foreach (var key in this.ExperimentBook.Keys)
             {
-                Console.WriteLine(key + ". " + this.ExperimentBook[key].ToString().Replace("Sandbox.Experiments.", ""));
+                Console.WriteLine(key + ". " + this.ExperimentBook[key].ToString().Replace("LabCoat.Experiments.", ""));
             }
             Console.Write("> ");
         }
