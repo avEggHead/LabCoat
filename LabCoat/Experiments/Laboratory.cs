@@ -26,7 +26,8 @@ namespace Sandbox.Experiments
             { 11, new HowDoDelegatesWork() },
             { 12, new CryptographyHowItWorks() },
             { 13, new ByteArrayExperiments()},
-            { 14, new HashingTest() }
+            { 14, new HashingTest() },
+            { 15, new SystemInfoTesting() },
         };
 
         public IExperiment SelectExperiment()
