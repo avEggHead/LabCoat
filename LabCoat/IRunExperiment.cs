@@ -1,4 +1,4 @@
-﻿namespace Sandbox
+﻿namespace LabCoat
 {
     public interface IExperiment
     {

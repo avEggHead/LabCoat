@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Drawing;
 
-namespace Sandbox.Experiments
+namespace LabCoat.Experiments
 {
     public class Converters : IExperiment
     {

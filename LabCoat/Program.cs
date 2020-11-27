@@ -1,7 +1,7 @@
-﻿using Sandbox.Experiments;
+﻿using LabCoat.Experiments;
 using System;
 
-namespace Sandbox
+namespace LabCoat
 {
     internal class Program
     {

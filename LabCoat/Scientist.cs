@@ -1,9 +1,9 @@
-﻿using Sandbox.Experiments;
+﻿using LabCoat.Experiments;
 using System;
 using System.Diagnostics;
 using System.Threading;
 
-namespace Sandbox
+namespace LabCoat
 {
     internal class Scientist
     {

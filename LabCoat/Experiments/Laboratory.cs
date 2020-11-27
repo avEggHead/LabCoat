@@ -1,9 +1,8 @@
-﻿using Sandbox.Experiments;
-using System;
-using System.Collections.Generic;
-
-namespace Sandbox.Experiments
+﻿namespace LabCoat.Experiments
 {
+    using System;
+    using System.Collections.Generic;
+
     // Put all your experiment classes in the ExperimentBook.
     // when you execute the program type in the number that
     // matches its key in the dictionary.
@@ -41,7 +40,7 @@ namespace Sandbox.Experiments
             Console.WriteLine("Choose Experiment: (type the number and hit Enter)");
             foreach (var key in this.ExperimentBook.Keys)
             {
-                Console.WriteLine(key + ". " + this.ExperimentBook[key].ToString().Replace("Sandbox.Experiments.", ""));
+                Console.WriteLine(key + ". " + this.ExperimentBook[key].ToString().Replace("LabCoat.Experiments.", ""));
             }
             Console.Write("> ");
         }

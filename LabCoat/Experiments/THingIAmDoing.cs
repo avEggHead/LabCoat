@@ -1,4 +1,4 @@
-﻿namespace Sandbox.Experiments
+﻿namespace LabCoat.Experiments
 {
     internal class THingIAmDoing : IExperiment
     {

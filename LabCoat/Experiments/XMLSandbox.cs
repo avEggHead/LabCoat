@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml;
 
-namespace Sandbox.Experiments
+namespace LabCoat.Experiments
 {
     internal class XMLSandbox : IExperiment
     {

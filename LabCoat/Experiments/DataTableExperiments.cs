@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using System;
 
-namespace Sandbox.Experiments
+namespace LabCoat.Experiments
 {
     internal class DataTableExperiments : IExperiment
     {

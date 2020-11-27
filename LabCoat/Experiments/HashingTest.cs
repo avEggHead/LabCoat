@@ -1,4 +1,4 @@
-﻿namespace Sandbox.Experiments
+﻿namespace LabCoat.Experiments
 {
     using System.Security.Cryptography;
     using System.Text;

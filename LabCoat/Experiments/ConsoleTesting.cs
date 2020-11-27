@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sandbox.Experiments
+namespace LabCoat.Experiments
 {
     internal class ConsoleTesting : IExperiment
     {
