@@ -1,9 +1,9 @@
-﻿using Sandbox.Experiments;
+﻿using LabCoat.Experiments;
 using System;
 using System.Diagnostics;
 using System.Threading;
 
-namespace Sandbox
+namespace LabCoat
 {
     internal class Scientist
     {
@@ -43,6 +43,11 @@ namespace Sandbox
                     GC.Collect();
                 }
             }
+            // leave lab
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("LabCoat by Clinton Avery is licensed under a Creative Commons Attribution 4.0 International License.");
+            Console.WriteLine("Please star, fork, and clone the repo at https://github.com/avEggHead/LabCoat.");
+            Console.ResetColor();
         }
 
         private void HandleExperimentNotFound()
@@ -83,7 +88,7 @@ namespace Sandbox
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(experiment.IdentifyExperiment());
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Start of Experiment Output: ");
+            Console.WriteLine("***Start of Experiment Output***");
             Console.WriteLine("=================================");
             Console.WriteLine();
             Console.ResetColor();
@@ -100,7 +105,7 @@ namespace Sandbox
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("=================================");
-            Console.WriteLine("End of Experiment Output: ");
+            Console.WriteLine("***End of Experiment Output*** ");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("Elapsed Time: " + timer.ElapsedMilliseconds + " ms");
             Console.ResetColor();
