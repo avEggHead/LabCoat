@@ -12,21 +12,7 @@
     {
         public Dictionary<int, IExperiment> ExperimentBook = new Dictionary<int, IExperiment>
         {
-            { 1, new Converters() },
-            { 2, new Strings() },
-            { 3, new Processes() },
-            { 4, new DataTableExperiments() },
-            { 5, new ThrowsException() },
-            { 6, new PrintingInDifferentColors() },
-            { 7, new NewClass() },
-            { 8, new ConsoleTesting() },
-            { 9, new HowLongDoesItTakeToCountAndPrint() },
-            { 10, new RunningAWhileLoop() },
-            { 11, new HowDoDelegatesWork() },
-            { 12, new CryptographyHowItWorks() },
-            { 13, new ByteArrayExperiments()},
-            { 14, new HashingTest() },
-            { 15, new SystemInfoTesting() },
+            {1, new ExampleExperiment() }
         };
 
         public IExperiment SelectExperiment()

@@ -45,7 +45,8 @@ namespace LabCoat
             }
             // leave lab
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("LabCoat by Clinton Avery is licensed under a Creative Commons Attribution 4.0 International License. Feel free to clone, fork, and star the repo https://github.com/avEggHead/LabCoat.");
+            Console.WriteLine("LabCoat by Clinton Avery is licensed under a Creative Commons Attribution 4.0 International License.");
+            Console.WriteLine("Please star, fork, and clone the repo at https://github.com/avEggHead/LabCoat.");
             Console.ResetColor();
         }
 
