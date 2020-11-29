@@ -12,6 +12,7 @@
     {
         public Dictionary<int, IExperiment> ExperimentBook = new Dictionary<int, IExperiment>
         {
+            { 0, new XMLSandbox() },
             { 1, new Converters() },
             { 2, new Strings() },
             { 3, new Processes() },
@@ -27,6 +28,8 @@
             { 13, new ByteArrayExperiments()},
             { 14, new HashingTest() },
             { 15, new SystemInfoTesting() },
+            { 16, new ThreadingFun()},
+            { 17, new WorkingWithJSON() }
         };
 
         public IExperiment SelectExperiment()
