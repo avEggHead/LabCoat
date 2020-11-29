@@ -12,14 +12,13 @@
     {
         public Dictionary<int, IExperiment> ExperimentBook = new Dictionary<int, IExperiment>
         {
-            { 0, new XMLSandbox() },
             { 1, new Converters() },
             { 2, new Strings() },
             { 3, new Processes() },
             { 4, new DataTableExperiments() },
             { 5, new ThrowsException() },
             { 6, new PrintingInDifferentColors() },
-            { 7, new NewClass() },
+            { 7, new XMLSandbox() },
             { 8, new ConsoleTesting() },
             { 9, new HowLongDoesItTakeToCountAndPrint() },
             { 10, new RunningAWhileLoop() },

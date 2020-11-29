@@ -24,9 +24,6 @@
     <Compile Update="Experiments\Laboratory.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Update="Experiments\NewClass.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
     <Compile Update="Experiments\PrintingInDifferentColors.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
