@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Threading;
 
     // Put all your experiment classes in the ExperimentBook.
     // when you execute the program type in the number that
@@ -28,7 +29,12 @@
             { 14, new HashingTest() },
             { 15, new SystemInfoTesting() },
             { 16, new ThreadingFun()},
-            { 17, new WorkingWithJSON() }
+            { 17, new WorkingWithJSON() },
+            { 18, new PrintInColumns() },
+            { 19, new JsonSerializationExperiment() },
+            { 20, new PrintInColumns() },
+            { 21, new PrintInColumns() },
+            { 22, new PrivateMethodTesting() },
         };
 
         public IExperiment SelectExperiment()
@@ -40,10 +46,26 @@
         private void DisplayExperimentBookContents()
         {
             Console.WriteLine("Choose Experiment: (type the number and hit Enter)");
+            var topOfCOlumns = Console.CursorTop;
+            var topOfCOlumns2 = Console.CursorTop;
+            var trackNumberOfExperiments = 0;
             foreach (var key in this.ExperimentBook.Keys)
             {
+                Thread.Sleep(10);
+                if (trackNumberOfExperiments >= 10)
+                {
+                    Console.SetCursorPosition(40, topOfCOlumns);
+                    topOfCOlumns++;
+                }
+                if (trackNumberOfExperiments >= 20)
+                {
+                    Console.SetCursorPosition(80, topOfCOlumns2);
+                    topOfCOlumns2++;
+                }
                 Console.WriteLine(key + ". " + this.ExperimentBook[key].ToString().Replace("LabCoat.Experiments.", ""));
+                trackNumberOfExperiments++;
             }
+            Console.SetCursorPosition(0, 11);
             Console.Write("> ");
         }
 
