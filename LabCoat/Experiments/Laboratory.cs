@@ -12,7 +12,13 @@
     {
         public Dictionary<int, IExperiment> ExperimentBook = new Dictionary<int, IExperiment>
         {
-            {1, new ExampleExperiment() }
+            {1, new ExampleExperiment() },
+            {2, new CastEnumToNull() },
+            {3, new DateTimeParsing() },
+            {4, new IntegerDivision() },
+            {5, new DelegateExp() },
+            {6, new CovarianceDelegate() },
+            {7, new ParseIntNull() }
         };
 
         public IExperiment SelectExperiment()
