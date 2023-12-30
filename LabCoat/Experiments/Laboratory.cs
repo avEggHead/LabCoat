@@ -18,7 +18,8 @@
             {4, new IntegerDivision() },
             {5, new DelegateExp() },
             {6, new CovarianceDelegate() },
-            {7, new ParseIntNull() }
+            {7, new ParseIntNull() },
+            {8, new RotateArray() }
         };
 
         public IExperiment SelectExperiment()
