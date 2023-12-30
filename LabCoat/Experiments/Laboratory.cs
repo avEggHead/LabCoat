@@ -19,7 +19,8 @@
             {5, new DelegateExp() },
             {6, new CovarianceDelegate() },
             {7, new ParseIntNull() },
-            {8, new RotateArray() }
+            {8, new RotateArray() },
+            {9, new MergeIntervals() },
         };
 
         public IExperiment SelectExperiment()
