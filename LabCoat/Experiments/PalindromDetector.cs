@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace LabCoat.Experiments
 {
-    internal class PalindromDetector : IExperiment
+    internal class PalindromeDetector : IExperiment
     {
         public void Experiment()
         {
