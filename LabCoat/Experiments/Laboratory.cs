@@ -21,6 +21,7 @@
             {7, new ParseIntNull() },
             {8, new RotateArray() },
             {9, new MergeIntervals() },
+            {10, new PalindromDetector() },
         };
 
         public IExperiment SelectExperiment()
