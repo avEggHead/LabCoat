@@ -22,6 +22,7 @@
             {8, new RotateArray() },
             {9, new MergeIntervals() },
             {10, new PalindromeDetector() },
+            {11, new FindMissingNumber() }
         };
 
         public IExperiment SelectExperiment()
