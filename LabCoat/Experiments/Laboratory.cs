@@ -22,7 +22,8 @@
             {8, new RotateArray() },
             {9, new MergeIntervals() },
             {10, new PalindromeDetector() },
-            {11, new FindMissingNumber() }
+            {11, new FindMissingNumber() },
+            {12, new LongestConsecutiveElements() }
         };
 
         public IExperiment SelectExperiment()
