@@ -23,7 +23,8 @@
             {9, new MergeIntervals() },
             {10, new PalindromeDetector() },
             {11, new FindMissingNumber() },
-            {12, new LongestConsecutiveElements() }
+            {12, new LongestConsecutiveElements() },
+            {13, new IsWeirdStringValid() },
         };
 
         public IExperiment SelectExperiment()
