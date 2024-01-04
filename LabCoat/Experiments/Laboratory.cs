@@ -25,6 +25,7 @@
             {11, new FindMissingNumber() },
             {12, new LongestConsecutiveElements() },
             {13, new IsWeirdStringValid() },
+            {14, new MaxSubArraySum() },
         };
 
         public IExperiment SelectExperiment()
