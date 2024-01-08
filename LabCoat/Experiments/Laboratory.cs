@@ -26,6 +26,7 @@
             {12, new LongestConsecutiveElements() },
             {13, new IsWeirdStringValid() },
             {14, new MaxSubArraySum() },
+            {15, new FirstUniqueChar() },
         };
 
         public IExperiment SelectExperiment()
