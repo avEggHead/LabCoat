@@ -27,6 +27,8 @@
             {13, new IsWeirdStringValid() },
             {14, new MaxSubArraySum() },
             {15, new FirstUniqueChar() },
+            {16, new FizzBazz() },
+            {17, new CheckingCountProperty() },
         };
 
         public IExperiment SelectExperiment()

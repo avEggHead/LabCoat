@@ -7,7 +7,9 @@ namespace LabCoat.Experiments
         public void Experiment()
         {
             //string input = "loveleetcode";
-            string input = "leetcode";
+            //string input = "leetcode";
+            //string input = "alphabet";
+            string input = "aaaa";
             int result = this.FirstUniqChar(input);
             Console.WriteLine($"The index of the first non-repeating character is: {result}");
         }
@@ -16,7 +18,7 @@ namespace LabCoat.Experiments
         {
             // loop through all the chars.  Compare it with all the other chars.  If it matches any, move to the next. 
             // if it doesn't match.  That's the one.
-            int result = 0;
+            int result = -1;
             for(int i = 0; i < input.Length; i++)
             {
                 char c = input[i];
