@@ -29,6 +29,8 @@
             {15, new FirstUniqueChar() },
             {16, new FizzBazz() },
             {17, new CheckingCountProperty() },
+            {18, new TwoSum() },
+            {19, new ListNodeProblem() },
         };
 
         public IExperiment SelectExperiment()
