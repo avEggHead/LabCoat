@@ -31,6 +31,9 @@
             {17, new CheckingCountProperty() },
             {18, new TwoSum() },
             {19, new ListNodeProblem() },
+            {20, new LongestNonRepeatingSubstring() },
+            {21, new TwoSortedArrays() },
+            {22, new LongestPalindromicString() }
         };
 
         public IExperiment SelectExperiment()
