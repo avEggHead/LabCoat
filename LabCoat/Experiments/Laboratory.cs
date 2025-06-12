@@ -33,7 +33,9 @@
             {19, new ListNodeProblem() },
             {20, new LongestNonRepeatingSubstring() },
             {21, new TwoSortedArrays() },
-            {22, new LongestPalindromicString() }
+            {22, new LongestPalindromicString() },
+            {23, new FixTheBugs() },
+            {24, new TestQuestion1() },
         };
 
         public IExperiment SelectExperiment()
