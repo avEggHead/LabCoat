@@ -36,6 +36,8 @@
             {22, new LongestPalindromicString() },
             {23, new FixTheBugs() },
             {24, new TestQuestion1() },
+            {25, new LongPalindrome() },
+            {26, new LongestPalindromeRefactor() }
         };
 
         public IExperiment SelectExperiment()
