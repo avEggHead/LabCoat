@@ -21,23 +21,7 @@
             {7, new ParseIntNull() },
             {8, new RotateArray() },
             {9, new MergeIntervals() },
-            {10, new PalindromeDetector() },
-            {11, new FindMissingNumber() },
-            {12, new LongestConsecutiveElements() },
-            {13, new IsWeirdStringValid() },
-            {14, new MaxSubArraySum() },
-            {15, new FirstUniqueChar() },
-            {16, new FizzBazz() },
-            {17, new CheckingCountProperty() },
-            {18, new TwoSum() },
-            {19, new ListNodeProblem() },
-            {20, new LongestNonRepeatingSubstring() },
-            {21, new TwoSortedArrays() },
-            {22, new LongestPalindromicString() },
-            {23, new FixTheBugs() },
-            {24, new TestQuestion1() },
-            {25, new LongPalindrome() },
-            {26, new LongestPalindromeRefactor() }
+            {10, new ZigZagArray() }
         };
 
         public IExperiment SelectExperiment()
