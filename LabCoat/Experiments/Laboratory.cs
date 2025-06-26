@@ -22,6 +22,9 @@
             {8, new RotateArray() },
             {9, new MergeIntervals() },
             {10, new PalindromeDetector() },
+            {11, new ProblemFromLeet() },
+            {12, new LargestContainer() },
+            {13, new RomanNumeralConverter() }
         };
 
         public IExperiment SelectExperiment()

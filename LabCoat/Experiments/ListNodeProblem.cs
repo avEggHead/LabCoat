@@ -5,7 +5,7 @@ using System.Numerics;
 
 namespace LabCoat.Experiments
 {
-    internal class ListNodeProblem : IExperiment
+    internal class Problem : IExperiment
     {
         public void Experiment()
         {
