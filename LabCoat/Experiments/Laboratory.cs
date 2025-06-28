@@ -24,7 +24,9 @@
             {10, new PalindromeDetector() },
             {11, new ProblemFromLeet() },
             {12, new LargestContainer() },
-            {13, new RomanNumeralConverter() }
+            {13, new RomanNumeralConverter() },
+            {14, new AlliterationChecker() },
+            { }
         };
 
         public IExperiment SelectExperiment()
