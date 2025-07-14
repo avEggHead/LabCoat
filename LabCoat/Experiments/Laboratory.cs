@@ -31,6 +31,7 @@
             {17, new IteratorMethods() },
             {18, new KeypadCombos() },
             {19, new FourSumCalculator() },
+            {20, new LinkedListNodeRemover() },
         };
 
         public IExperiment SelectExperiment()
