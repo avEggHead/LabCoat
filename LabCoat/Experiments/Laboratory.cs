@@ -26,7 +26,11 @@
             {12, new LargestContainer() },
             {13, new RomanNumeralConverter() },
             {14, new AlliterationChecker() },
-            { }
+            {15, new ThreeSumChallenge() },
+            {16, new NearestSetOfThreeSumToTarget() },
+            {17, new IteratorMethods() },
+            {18, new KeypadCombos() },
+            {19, new FourSumCalculator() },
         };
 
         public IExperiment SelectExperiment()
