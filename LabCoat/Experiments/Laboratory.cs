@@ -32,6 +32,7 @@
             {18, new KeypadCombos() },
             {19, new FourSumCalculator() },
             {20, new LinkedListNodeRemover() },
+            {21, new ParenthesesValidator() },
         };
 
         public IExperiment SelectExperiment()
