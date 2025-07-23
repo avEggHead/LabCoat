@@ -22,7 +22,7 @@ namespace LabCoat.Experiments
                 while (next != null)
                 {
                     values.Add(next.val);
-                    next = next.next;
+                    next = next.next; //
                 }
             }
             if (values.Count == 0) { return null; }
