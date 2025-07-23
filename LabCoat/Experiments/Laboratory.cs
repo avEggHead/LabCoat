@@ -33,6 +33,8 @@
             {19, new FourSumCalculator() },
             {20, new LinkedListNodeRemover() },
             {21, new ParenthesesValidator() },
+            {22, new LinkedListMerger() },
+            {23, new MultipleListMerger() },
         };
 
         public IExperiment SelectExperiment()
