@@ -38,6 +38,8 @@
             {24, new EveryOtherSwap() },
             {25, new UpToPointListReverse() },
             {26, new RemoveDuplicatesFromArray() },
+            {27, new RemoveOccurencesOfInteger() },
+            {28, new NeedleInHaystack() },
         };
 
         public IExperiment SelectExperiment()
