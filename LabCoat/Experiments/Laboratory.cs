@@ -35,6 +35,9 @@
             {21, new ParenthesesValidator() },
             {22, new LinkedListMerger() },
             {23, new MultipleListMerger() },
+            {24, new EveryOtherSwap() },
+            {25, new UpToPointListReverse() },
+            {26, new RemoveDuplicatesFromArray() },
         };
 
         public IExperiment SelectExperiment()
