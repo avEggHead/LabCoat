@@ -40,6 +40,7 @@
             {26, new RemoveDuplicatesFromArray() },
             {27, new RemoveOccurencesOfInteger() },
             {28, new NeedleInHaystack() },
+            {29, new LastWord() },
         };
 
         public IExperiment SelectExperiment()
