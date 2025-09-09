@@ -41,6 +41,7 @@
             {27, new RemoveOccurencesOfInteger() },
             {28, new NeedleInHaystack() },
             {29, new DivisionWithoutDividing() },
+            {30, new FindIndex() },
         };
 
         public IExperiment SelectExperiment()

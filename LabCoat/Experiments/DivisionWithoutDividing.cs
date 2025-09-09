@@ -28,26 +28,24 @@ namespace LabCoat.Experiments
             Console.WriteLine("Expected: -2");
             Console.WriteLine($"Actual: {result4}");
 
-            var result5 = Divide(-2147483647, -1);
+            var result5 = Divide(-2147483648, -1);
 
             Console.WriteLine("Expected: 2147483648");
             Console.WriteLine($"Actual: {result5}");
         }
 
-        public int Divide(int dividend, int divisor)
+        public Int64 Divide(int dividend, int divisor)
         {
+            Int64 bigDividend = dividend;
             bool isNegative = false;
-            if ((dividend < 0 && divisor > 0) || (divisor < 0 && dividend >= 0))
+            if ((bigDividend < 0 && divisor > 0) || (divisor < 0 && bigDividend >= 0))
             {
                 isNegative = true;
             }
 
-            if (dividend < 0 )
+            if (bigDividend < 0 )
             {
-                var tempNumber = dividend - dividend;
-                var tempNumber2 = tempNumber - dividend;
-                var tempNumber3 = tempNumber2 - -1;
-                dividend = dividend - dividend - dividend;
+                bigDividend = bigDividend - bigDividend - bigDividend;
             }
 
             if (divisor < 0)
@@ -57,8 +55,11 @@ namespace LabCoat.Experiments
 
             if (divisor == 1)
             {
-                if (isNegative) { return dividend - dividend - dividend;  }
-                return dividend;
+                if (isNegative) 
+                {
+                    return -bigDividend;  
+                }
+                return bigDividend;
             }
 
             int result = 0;
@@ -70,14 +71,14 @@ namespace LabCoat.Experiments
                 groups.Add(group);
             }
 
-            while (dividend > 0 && dividend >= groups.Count)
+            while (bigDividend > 0 && bigDividend >= groups.Count)
             {
                 for (int i = 0; i < groups.Count; i++)
                 {
                     int group = groups[i];
                     group++;
                     groups[i] = group;
-                    dividend--;
+                    bigDividend--;
                 }
             }
 
@@ -85,7 +86,7 @@ namespace LabCoat.Experiments
 
             if (isNegative)
             {
-                result = result - result - result;
+                result = -result;
             }
 
             return result;
